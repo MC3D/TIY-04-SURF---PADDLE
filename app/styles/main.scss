@@ -126,7 +126,7 @@ header {
 .page {
   float: left;
   font-family: $body-font-family;
-  margin: em(62) 0 0 em(163);
+  margin: em(62) 0 em(60) em(163);
   width: 48.5%;
 
   .link {
@@ -364,7 +364,78 @@ header {
 }
 
 .popular-posts {
+  border-top: solid em(1) #e0e7ea;
   clear: both;
+  font-family: $header-font-family;
+  padding: em(39) 0 0;
+  text-align: center;
+
+  h2 {
+    color: $primary-font-color;
+    font-size: em(63);
+    font-weight: 100;
+    margin-bottom: em(11);
+  }
+
+  .overlay {
+    background-color: $secondary-font-color;
+    display: inline-block;
+    float: left;
+    height: em(331);
+    width: 25%;
+  };
+
+  .post {
+    color: #000;
+    float: left;
+    height: em(331);
+    opacity: .3;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+
+    span {
+      bottom: em(6);
+      font-size: em(29.5);
+      line-height: em(20);
+      margin-left: em(8);
+      position: absolute;
+    }
+
+    &:hover {
+      @include text-transition(#fff);
+      opacity: 1;
+    }
+  }
+
+  .post-one {
+    background: url('../images/surfer.jpeg') no-repeat center center/cover;
+    background-position: 30%;
+  }
+
+  .post-two {
+    background: url('../images/beer.jpg') no-repeat center center/cover;
+  }
+
+  .post-three {
+    background: url('../images/galifianakis.jpg') no-repeat;
+    background-position: 57% 0%;
+    background-size: 157%;
+
+    span {
+      padding: 0 0 em(1.5) em(2);
+    }
+  }
+
+  .post-four {
+    background: url('../images/bar.jpg') no-repeat center center/cover;
+
+    span {
+      padding-left: em(2);
+    }
+  }
+
 }
 
 footer {
@@ -372,20 +443,6 @@ footer {
 }
 
 
-.post-one {
-  background: url('../images/dog.jpg') no-repeat center center/cover;
-}
 
-.post-two {
-  background: url('../images/beer.jpg') no-repeat center center/cover;
-}
-
-.post-three {
-  background: url('../images/galifianakis.jpg') no-repeat center center/cover;
-}
-
-.post-four {
-  background: url('../images/bar.jpg') no-repeat center center/cover;
-}
 
 // Custom Styles
