@@ -62,9 +62,14 @@ header {
     }
   }
 
+  nav {
+    margin: 0 auto;
+    max-width: 79%;
+  }
+
   .header-left {
     float: left;
-    margin: em(3) em(137);
+    margin-top: em(3);
 
     .logo {
       color: $primary-font-color;
@@ -84,7 +89,8 @@ header {
   .header-right {
     float: right;
     font-size: em(17.8);
-    padding: em(9) em(145);
+    padding-right: em(24);
+    padding-top: em(9);
 
     li {
       padding-left: em(11);
@@ -110,7 +116,7 @@ header {
     letter-spacing: em(-.7);
     position: relative;
     text-align: center;
-    top: em(22);
+    top: em(22.5);
 
     span {
       color: $primary-font-color;
@@ -484,7 +490,7 @@ footer {
 
 
     &:hover {
-      @include text-transition($secondary-font-color);
+      @include text-transition($tertiary-font-color);
     }
   }
 
