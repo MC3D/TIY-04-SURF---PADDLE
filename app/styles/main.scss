@@ -33,6 +33,10 @@ $tertiary-font-color: #5c6870; // dark gray
   background-color: $color;
 }
 
+body {
+  max-width: 1300px;
+}
+
 ul {
 
   list-style: none;
@@ -43,12 +47,14 @@ ul {
 }
 
 header {
+  @include outer-container;
   background: linear-gradient(
   rgba(16, 109, 179, .75),
   rgba(26, 109, 179, .75)),
   url('../images/waves.jpeg') no-repeat center center/cover;
   font-family: $header-font-family;
-  height: em(522);
+  height: em(523);
+  max-width: 100%;
 
   a {
     color: $primary-font-color;
@@ -92,9 +98,8 @@ header {
     padding-right: em(24);
     padding-top: em(9);
 
-    li {
+    .search-text {
       padding-left: em(11);
-      position: relative;
     }
 
     a {
@@ -490,7 +495,7 @@ footer {
 
 
     &:hover {
-      @include text-transition($tertiary-font-color);
+      @include text-transition($secondary-font-color);
     }
   }
 
