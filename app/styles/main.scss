@@ -753,8 +753,30 @@ li
         height: em(331);
 
         background-color: $secondary-font-color;
+        position: relative;
+
+        text-align: -webkit-left;
+        text-align: left;
 
         @include span-columns(3);
+
+        &:hover{
+          a
+          {
+              opacity: 1;
+
+              -webkit-transition: opacity .5s ease-in-out;
+                 -moz-transition: opacity .5s ease-in-out;
+                 -ms-transition: opacity .5s ease-in-out;
+                      transition: opacity .5s ease-in-out;
+
+          }
+
+          span {
+            @include text-transition(#fff);
+          }
+        }
+
     };
 
     .overlay a
@@ -770,16 +792,9 @@ li
         text-decoration: none;
 
         opacity: .3;
-        color: #000;
 
         @include pad();
 
-        &:hover
-        {
-            opacity: 1;
-
-            @include text-transition(#fff);
-        }
     }
 
     .overlay span
@@ -791,6 +806,9 @@ li
         bottom: em(6);
 
         margin-left: em(8);
+        color: $primary-font-color;
+        left: 0;
+
     }
 
     .post-one
@@ -823,6 +841,7 @@ li
         span
         {
             left: em(2);
+
         }
     }
 }
